@@ -2,7 +2,7 @@
 //= require ./jquery.jqplot
 //= require ./excanvas
 
-$(document).ready(function() {
+function init_jqplot_charts() {
   $('div[data-role="jqplot"]').each(function() {
     var options = $(this).data('options');
 
@@ -73,4 +73,8 @@ $(document).ready(function() {
     // initialize the graph
     $.jqplot($(this).attr('id'), $(this).data('series'), options);
   });
+}
+
+$(document).ready(function() {
+  init_jqplot_charts();
 });
